@@ -1,0 +1,31 @@
+﻿@model IKProject_2512.Models.HomeModel.IndexModel
+@{
+    ViewData["Title"] = "HomeLogin";
+}
+
+<h1>Team1 IK Projesine Hoşgeldiniz. </h1>
+
+<div class="row">
+    <div class="col-md-6">
+
+        <form asp-action="SignUp" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MailAddress" class="control-label"></label>
+                <input type="email" MailAddress" class="form-control" />
+                <span asp-validation-for="MailAddress" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+           
+            <button class="btn btn-dark">Giriş Yap</button>
+        </form>
+
+    </div>
+</div>
+
+
